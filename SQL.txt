@@ -1,0 +1,65 @@
+SQL
+Esta compuesto por algebra relacional
+
+Entidad - Es una representacion de algo
+Ejemplos de entidades: Clientes, Productos, Órdenes de compra, Proveedores.
+La entidad se representa dentro de la notacion de Chen con un Cuadrado y la palabra en el medio.
+
+Los Atributos se representan con un ovalo
+Atribtos Simples son Datos Unicos Por ejemplo el Precio de una casa son $4000
+Atribtos Compuestos Se representan con los ovalos con más ovalos abajo y se componen de atributos más pequeños
+Atributos Multivalor se representan con un doble circulo y se usa cuando necesita más de un atributo
+Atributos Derivados Se pueden obtener con cualquier otra información (atributo) y se representa con un ovalo punteado.
+
+Las key (es un atributo) se representa con un ovalo y subrayado el texto
+Las key se le agragan a una entidad para que sea unico e irrepetible
+
+Filas y Columnas
+Registro (RECORD) = Fila
+Campo (FIELD) = Columna
+
+    Columna Columna Columna
+Fila    #       #       #
+Fila    #       #       #
+Fila    #       #       #
+
+Valor de campo (Field Value)
+Tipos de datos
+INTEGER = ENTERO
+TEXT = TEXTO
+BLOB = BINARIOS (IMAGENES, ETC)
+REAL = FLOTANTES
+NUMERIC = NUMEROS PRECISOS
+
+Tabla (TABLE)
+Es una estructura de datos que se organiza en filas y columnas
+
+Para crear una base de datos 
+CREATE DATABASE "NOMBRE";
+
+Para crear una tabla (Una tabla es una entidad)
+CREATE TABLE "NOMBRE";
+
+Creamos una tabla con las columnas
+CREATE TABLE "users" (
+	"nombre"	TEXT,
+	"apellido"	TEXT,
+	"edad"	INTEGER
+);
+
+Insertamos datos
+INSERT INTO users (nombre,apellido,edad)
+VALUES ("Ricardo","Sanchez",22);
+
+INSERT INTO users (nombre,apellido,edad)
+VALUES ("Jorge","Sanchez",51),
+	   ("Maria","Chavez",51),
+	   ("Luis","Sanchez",24)
+
+Consultas (Querys)
+Seleccionamos todo de la tabla users
+SELECT * FROM users;
+Selecciona el nombre y edad de la tabla users
+SELECT nombre,edad FROM users;
+
+
