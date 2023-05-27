@@ -31,6 +31,10 @@ BLOB = BINARIOS (IMAGENES, ETC)
 REAL = FLOTANTES
 NUMERIC = NUMEROS PRECISOS
 
+IDENTIFICADORES (ID)
+Los identificadores Primarios (PK) Nos asegura un integridad referencial esto significa que podemos hacer referenca a cualquier registro sin tener valores duplicados, las Primary Key siembre deben de tener AUNTOINCREMENT para que cada registro sea unico.
+Identificadores Foraneos (FK) Hacen referencia al identificador primario de otra tabla
+
 Tabla (TABLE)
 Es una estructura de datos que se organiza en filas y columnas
 
@@ -41,10 +45,12 @@ Para crear una tabla (Una tabla es una entidad)
 CREATE TABLE "NOMBRE";
 
 Creamos una tabla con las columnas
-CREATE TABLE "users" (
+CREATE TABLE "usuarios" (
+	"id_usuario"	INTEGER,
 	"nombre"	TEXT,
 	"apellido"	TEXT,
-	"edad"	INTEGER
+	"edad"	INTEGER,
+	PRIMARY KEY("id_usuario" AUTOINCREMENT)
 );
 
 Insertamos datos
@@ -56,10 +62,22 @@ VALUES ("Jorge","Sanchez",51),
 	   ("Maria","Chavez",51),
 	   ("Luis","Sanchez",24)
 
+INSERT INTO turnos_medicos (profesional,id_usuario,motivo,horario)
+	   VALUES ('Dr. Ramirez',3,'Dolor de cabeza','11:30');
+
 Consultas (Querys)
+
+Para separar las consultas  se deben de separar con ;
+
 Seleccionamos todo de la tabla users
 SELECT * FROM users;
 Selecciona el nombre y edad de la tabla users
 SELECT nombre,edad FROM users;
+Seleccionamos dos tablas pero sobreponiendose
+SELECT * FROM turnos_medicos,usuarios;
+
+Eliminamos todos los registros de la tabla usuarios
+DELETE FROM usuarios;
+
 
 
