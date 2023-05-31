@@ -31,6 +31,12 @@ BLOB = BINARIOS (IMAGENES, ETC)
 REAL = FLOTANTES
 NUMERIC = NUMEROS PRECISOS
 
+CRUD
+CREATE
+READ
+UPDATE
+DELETE
+
 IDENTIFICADORES (ID)
 Los identificadores Primarios (PK) Nos asegura un integridad referencial esto significa que podemos hacer referenca a cualquier registro sin tener valores duplicados, las Primary Key siembre deben de tener AUNTOINCREMENT para que cada registro sea unico.
 Identificadores Foraneos (FK) Hacen referencia al identificador primario de otra tabla
